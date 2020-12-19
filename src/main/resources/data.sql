@@ -1,2 +1,0 @@
-#INSERT INTO USERS(firstname, lastname, login, password, address) VALUES('fuser1', 'luser1', 'login1', 'pwd1', '14 rue ');
-#INSERT INTO USERS(firstname, lastname, login, password, address) VALUES('fuser2', 'luser2', 'login2', 'pwd2', '10 avenue ');

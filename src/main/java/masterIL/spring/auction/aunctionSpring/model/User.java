@@ -3,26 +3,35 @@ package masterIL.spring.auction.aunctionSpring.model;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Service
 @Scope("prototype")
 @Entity
-public class Users {
+@Table(name="Users")
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private int id;
+    // Firstname of the user
+    @Column(name = "firstname")
     private String firstname;
+    // Lastname of the user
+    @Column(name = "lastname")
     private String lastname;
+    // Login of the user
+    @Column(name = "login")
     private String login;
+    // Address of the user
+    @Column(name = "address")
     private String address;
+    // Password of the user
+    @Column(name = "password")
     private String password;
 
-    public Users(int id, String firstname, String lastname, String login, String address, String password) {
+    public User(int id, String firstname, String lastname, String login, String address, String password) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -31,7 +40,7 @@ public class Users {
         this.password = password;
     }
 
-    public Users() {
+    public User() {
 
     }
 

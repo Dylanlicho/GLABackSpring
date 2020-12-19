@@ -23,6 +23,8 @@ create table if not exists articles (
     endDate datetime not null,
     weight double not null,
     constraint foreign key(seller) references users(id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
 );
 
 -- user participate in article
@@ -31,8 +33,12 @@ create table if not exists participation (
     idArticle int not null,
     price double not null,
     primary key (idUser, idArticle),
-    constraint foreign key(idUser) references users(id),
+    constraint foreign key(idUser) references users(id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
     constraint foreign key(idArticle) references articles(id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
 );
 
 create table if not exists categories (
@@ -46,14 +52,18 @@ create table if not exists of_category (
     idArticle int not null,
     idCategory int not null,
     primary key (idArticle, idCategory),
-    constraint foreign key(idArticle) references articles(id),
+    constraint foreign key(idArticle) references articles(id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
     constraint foreign key(idCategory) references categories(id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
 );
 
-INSERT INTO users (firstname, lastname, login, pwd, address) VALUES('Jean', 'Luc', 'xxDarkJeanLucxx', 'jaimelesfleurs', '10 rue du jardin 54500');
-INSERT INTO Users (firstname, lastname, login, pwd, address) VALUES('Didier', 'Gal', 'Michemiche', 'jaimelalogique', '27 rue de l ennuie 26356');
-INSERT INTO Users (firstname, lastname, login, pwd, address) VALUES('Kevin', 'Louche', 'Imasodark', 'noIdea', '27 rue de l ennuie 54400');
-INSERT INTO Users (firstname, lastname, login, pwd, address) VALUES('test', 'test', 'test', 'test', 'test adress');
+INSERT INTO users (firstname, lastname, login, password, address) VALUES('Jean', 'Luc', 'xxDarkJeanLucxx', 'jaimelesfleurs', '10 rue du jardin 54500');
+INSERT INTO Users (firstname, lastname, login, password, address) VALUES('Didier', 'Gal', 'Michemiche', 'jaimelalogique', '27 rue de l ennuie 26356');
+INSERT INTO Users (firstname, lastname, login, password, address) VALUES('Kevin', 'Louche', 'Imasodark', 'noIdea', '27 rue de l ennuie 54400');
+INSERT INTO Users (firstname, lastname, login, password, address) VALUES('test', 'test', 'test', 'test', 'test adress');
 
 INSERT INTO categories(name) VALUES ('meuble');
 INSERT INTO categories(name) VALUES ('biblo');
