@@ -1,6 +1,6 @@
-package masterIL.spring.auction.aunctionSpring.dao;
+package fr.univlorraine.apde.dao;
 
-import masterIL.spring.auction.aunctionSpring.model.Category;
+import fr.univlorraine.apde.model.Category;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ICategoryRepository extends CrudRepository<Category, Integer> {

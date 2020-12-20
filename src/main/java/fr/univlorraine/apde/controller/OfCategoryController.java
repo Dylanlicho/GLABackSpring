@@ -1,14 +1,13 @@
-package masterIL.spring.auction.aunctionSpring.controller;
+package fr.univlorraine.apde.controller;
 
-import masterIL.spring.auction.aunctionSpring.dao.ICategoryRepository;
-import masterIL.spring.auction.aunctionSpring.dao.IOfCategoryRepository;
-import masterIL.spring.auction.aunctionSpring.model.Category;
-import masterIL.spring.auction.aunctionSpring.model.ofCategoryEntity.OfCategory;
+import fr.univlorraine.apde.dao.IOfCategoryRepository;
+import fr.univlorraine.apde.model.ofCategoryEntity.OfCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class OfCategoryController {
 
@@ -28,7 +27,7 @@ public class OfCategoryController {
     @GetMapping(value = "existOfCategory/{id}")
     public boolean existOfCategoryById(@PathVariable Integer id){return dao.existsById(id);}
 
-    @GetMapping(value = "countOfCategory")
+    @GetMapping(value = "countOfCategories")
     public long count(){return dao.count();}
 
     @PostMapping(value = "addOfCategory")

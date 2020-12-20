@@ -1,4 +1,4 @@
-package masterIL.spring.auction.aunctionSpring.model.ofCategoryEntity;
+package fr.univlorraine.apde.model.ofCategoryEntity;
 
 import java.io.Serializable;
 import java.util.Objects;

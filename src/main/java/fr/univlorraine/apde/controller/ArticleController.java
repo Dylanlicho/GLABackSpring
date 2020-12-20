@@ -1,12 +1,13 @@
-package masterIL.spring.auction.aunctionSpring.controller;
+package fr.univlorraine.apde.controller;
 
-import masterIL.spring.auction.aunctionSpring.dao.IArticleRepository;
-import masterIL.spring.auction.aunctionSpring.model.Article;
+import fr.univlorraine.apde.dao.IArticleRepository;
+import fr.univlorraine.apde.model.Article;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class ArticleController {
 
@@ -26,7 +27,7 @@ public class ArticleController {
     @GetMapping(value = "existArticle/{id}")
     public boolean existArticleById(@PathVariable Integer id){return dao.existsById(id);}
 
-    @GetMapping(value = "countArticle")
+    @GetMapping(value = "countArticles")
     public long count(){return dao.count();}
 
     @PostMapping(value = "addArticle")

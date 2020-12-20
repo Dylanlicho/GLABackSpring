@@ -8,11 +8,11 @@
 		<version>2.3.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>masterIL.spring.auction</groupId>
-	<artifactId>aunctionSpring</artifactId>
+	<groupId>fr.univlorraine.apde</groupId>
+	<artifactId>APDE</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>aunctionSpring</name>
-	<description>Project for Spring and GLA</description>
+	<name>APDE</name>
+	<description>Spring Project</description>
 
 	<properties>
 		<java.version>11</java.version>

@@ -1,4 +1,4 @@
-package masterIL.spring.auction.aunctionSpring.model.participationEntity;
+package fr.univlorraine.apde.model.participationEntity;
 
 import java.io.Serializable;
 import java.util.Objects;

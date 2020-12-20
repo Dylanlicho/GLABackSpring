@@ -1,10 +1,10 @@
-package masterIL.spring.auction.aunctionSpring;
+package fr.univlorraine.apde;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AunctionSpringApplicationTests {
+class APDEApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,4 +1,4 @@
-package masterIL.spring.auction.aunctionSpring.model;
+package fr.univlorraine.apde.model;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;

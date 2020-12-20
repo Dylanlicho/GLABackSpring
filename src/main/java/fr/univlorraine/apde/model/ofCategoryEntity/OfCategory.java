@@ -1,4 +1,4 @@
-package masterIL.spring.auction.aunctionSpring.model.ofCategoryEntity;
+package fr.univlorraine.apde.model.ofCategoryEntity;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;

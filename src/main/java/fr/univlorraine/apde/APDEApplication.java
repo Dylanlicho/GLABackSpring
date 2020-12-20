@@ -1,13 +1,13 @@
-package masterIL.spring.auction.aunctionSpring;
+package fr.univlorraine.apde;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AunctionSpringApplication {
+public class APDEApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AunctionSpringApplication.class, args);
+		SpringApplication.run(APDEApplication.class, args);
 	}
 
 }

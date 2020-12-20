@@ -1,4 +1,4 @@
-package masterIL.spring.auction.aunctionSpring.model.participationEntity;
+package fr.univlorraine.apde.model.participationEntity;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;

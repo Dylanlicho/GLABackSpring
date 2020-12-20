@@ -1,6 +1,6 @@
-package masterIL.spring.auction.aunctionSpring.dao;
+package fr.univlorraine.apde.dao;
 
-import masterIL.spring.auction.aunctionSpring.model.Article;
+import fr.univlorraine.apde.model.Article;
 import org.springframework.data.repository.CrudRepository;
 
 public interface IArticleRepository extends CrudRepository<Article, Integer> {
