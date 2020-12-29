@@ -34,6 +34,7 @@ $ rm -rf apde-back-spring
 
 * /users : returns all the users
 * /user/id : returns the specific user where id is the id of the user
+* /user/login/login : returns the specific user where login is the login of the user
 * /existUser/id : returns whether the specific user exists or not
 * /countUsers : returns the count of all the users
 * /addUser : adds a new user
