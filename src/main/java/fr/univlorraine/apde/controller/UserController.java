@@ -24,6 +24,11 @@ public class UserController {
         return dao.findById(id);
     }
 
+    @GetMapping(value = "user/login/{login}")
+    public Optional<User> getUserByLogin(@PathVariable String login){
+        return dao.findByLogin(login);
+    }
+
     @GetMapping(value = "existUser/{id}")
     public boolean existUserById(@PathVariable Integer id){return dao.existsById(id);}
 
