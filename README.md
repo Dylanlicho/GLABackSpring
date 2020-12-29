@@ -45,6 +45,7 @@ $ rm -rf apde-back-spring
 
 * /articles : returns all the articles
 * /article/id : returns the specific article where id is the id of the article
+* /article/seller/seller : returns the specific article where seller is the id of the seller of the article
 * /existArticle/id : returns whether the specific article exists or not
 * /countArticles : returns the count of all the articles
 * /addArticle : adds a new article
@@ -79,6 +80,7 @@ Participation is the relation between a user and a bid.
 
 * /participations : returns all the participations
 * /participation/id : returns the specific participation where id is the id of the participation
+* /participation/best/idArticle : returns the best participation along an article, meaning the highest price
 * /existParticipation/id : returns whether the specific participation exists or not
 * /countParticipations : returns the count of all the participation
 * /addParticipation : adds a new participation

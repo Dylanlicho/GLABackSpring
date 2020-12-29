@@ -24,6 +24,11 @@ public class ArticleController {
         return dao.findById(id);
     }
 
+    @GetMapping(value = "article/seller/{seller}")
+    public Optional<Article[]> getArticleBySeller(@PathVariable Integer seller){
+        return dao.findBySeller(seller);
+    }
+
     @GetMapping(value = "existArticle/{id}")
     public boolean existArticleById(@PathVariable Integer id){return dao.existsById(id);}
 

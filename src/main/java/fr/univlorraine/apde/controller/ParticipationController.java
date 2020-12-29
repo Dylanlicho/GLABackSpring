@@ -24,6 +24,11 @@ public class ParticipationController {
         return dao.findById(id);
     }
 
+    @GetMapping(value = "participation/best/{idArticle}")
+    public Optional<Participation> getBestParticipationByIdArticle(@PathVariable Integer idArticle){
+        return dao.findBestBidder(idArticle);
+    }
+
     @GetMapping(value = "existParticipation/{id}")
     public boolean existParticipationById(@PathVariable Integer id){return dao.existsById(id);}
 
