@@ -19,15 +19,15 @@ public class Article {
     // Name of the article
     @Column(name = "name")
     private String name;
+    // Description of the article
+    @Column(name = "description")
+    private String description;
     // Id of the seller
     @Column(name = "seller")
     private int seller;
     // Starting price of the article
     @Column(name = "startprice")
     private double startPrice;
-    // Price of the object outside aunction
-    @Column(name = "price")
-    private double price;
     // Starting date of aunction for this article
     @Column(name = "startdate")
     private Date startDate;
@@ -41,12 +41,12 @@ public class Article {
     public Article() {
     }
 
-    public Article(int id, String name, int seller, double startPrice, double price, Date startDate, Date endDate, double weight) {
+    public Article(int id, String name, String description, int seller, double startPrice, Date startDate, Date endDate, double weight) {
         this.id = id;
         this.name = name;
+        this.description = description;
         this.seller = seller;
         this.startPrice = startPrice;
-        this.price = price;
         this.startDate = startDate;
         this.endDate = endDate;
         this.weight = weight;
@@ -68,6 +68,14 @@ public class Article {
         this.name = name;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public int getSeller() {
         return seller;
     }
@@ -82,14 +90,6 @@ public class Article {
 
     public void setStartPrice(double startPrice) {
         this.startPrice = startPrice;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
     }
 
     public Date getStartDate() {
