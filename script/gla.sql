@@ -65,7 +65,7 @@ INSERT INTO users (firstname, lastname, login, password, address) VALUES('Jean',
     ('Kevin', 'Louche', 'Imasodark', 'noIdea', '27 rue de l ennuie 54400'),
     ('test', 'test', 'test', 'test', 'test adress');
 
-INSERT INTO categories(name) VALUES ('meuble'), ('biblo'), ('livre'), ('bijoux'), ('autre');
+INSERT INTO categories(name) VALUES ('Meuble'), ('Biblo'), ('Livre'), ('Bijoux'), ('Autre');
 
 -- Luc sell 'machin', a 'meuble' and a 'biblo'
 INSERT INTO articles (name, description, seller, startPrice, startDate, endDate, weight) VALUES('Imprimante', 'Imprimante XXXX en bon état, jamais utilisée', 1, 12.50, '2020-12-05 14:00:00', '2020-12-25 12:00:00', 2.5);
