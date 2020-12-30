@@ -36,8 +36,8 @@ public class ArticleController {
     public long count(){return dao.count();}
 
     @PostMapping(value = "addArticle")
-    public void addArticle(@RequestBody Article article){
-        dao.save(article);
+    public Article addArticle(@RequestBody Article article){
+        return dao.save(article);
     }
 
     @DeleteMapping(value = "deleteArticleByArticle")

@@ -48,7 +48,7 @@ $ rm -rf apde-back-spring
 * /article/seller/seller : returns the specific article where seller is the id of the seller of the article
 * /existArticle/id : returns whether the specific article exists or not
 * /countArticles : returns the count of all the articles
-* /addArticle : adds a new article
+* /addArticle : adds a new article and returns the created article
 * /deleteArticleByArticle : deletes a article given this specific article
 * /deleteArticleById : deletes a article given his specific id
 
