@@ -40,6 +40,14 @@ public class User {
         this.password = password;
     }
 
+    public User(String firstname, String lastname, String login, String address, String password) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.login = login;
+        this.address = address;
+        this.password = password;
+    }
+
     public User() {
 
     }

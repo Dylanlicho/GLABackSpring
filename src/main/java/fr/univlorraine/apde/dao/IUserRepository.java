@@ -7,4 +7,5 @@ import java.util.Optional;
 
 public interface IUserRepository extends CrudRepository<User, Integer> {
     Optional<User> findByLogin(String login);
+    Boolean existsByLogin(String login);
 }
