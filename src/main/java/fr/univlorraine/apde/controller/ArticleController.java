@@ -28,6 +28,16 @@ public class ArticleController {
         return dao.findById(id);
     }
 
+    @GetMapping(value = "article/category/{categoryId}")
+    public Optional<Article[]> getArticleByCategoryId(@PathVariable Integer categoryId){
+        return dao.findByCategoryId(categoryId);
+    }
+
+    @GetMapping(value = "article/name/{name}")
+    public Optional<Article[]> getArticleByName(@PathVariable String name){
+        return dao.findByName(name);
+    }
+
     @GetMapping(value = "article/seller/{seller}")
     public Optional<Article[]> getArticleBySeller(@PathVariable Integer seller){
         return dao.findBySeller(seller);
@@ -49,6 +59,5 @@ public class ArticleController {
 
     @DeleteMapping(value = "deleteArticleById/{id}")
     public void deleteArticleById(@PathVariable Integer id){ dao.deleteById(id);}
-
 
 }
