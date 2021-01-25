@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
+/**
+ *
+ * @author DylanLICHO
+ */
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class CategoryController {

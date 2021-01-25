@@ -1,5 +1,9 @@
 package fr.univlorraine.apde.securityJWT.payloads;
 
+/**
+ *
+ * @author DylanLICHO
+ */
 public class SignupRequest {
 
     private String firstname;

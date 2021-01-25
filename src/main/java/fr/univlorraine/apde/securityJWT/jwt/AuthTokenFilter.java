@@ -17,6 +17,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ *
+ * @author DylanLICHO
+ */
 // Filter the requests
 public class AuthTokenFilter extends OncePerRequestFilter {
 

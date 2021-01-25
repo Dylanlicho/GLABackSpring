@@ -11,6 +11,10 @@ import org.springframework.stereotype.Component;
 import javax.naming.AuthenticationException;
 import java.util.Date;
 
+/**
+ *
+ * @author DylanLICHO
+ */
 // Some utilities for JWT
 @Component
 public class JwtUtils {

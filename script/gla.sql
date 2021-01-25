@@ -60,10 +60,24 @@ create table of_category (
     ON UPDATE CASCADE
 );
 
-INSERT INTO users (firstname, lastname, login, password, address) VALUES('Jean', 'Luc', 'xxDarkJeanLucxx', 'jaimelesfleurs', '10 rue du jardin 54500'),
-    ('Didier', 'Gal', 'Michemiche', 'jaimelalogique', '27 rue de l ennuie 26356'),
-    ('Kevin', 'Louche', 'Imasodark', 'noIdea', '27 rue de l ennuie 54400'),
-    ('test', 'test', 'test', 'test', 'test adress');
+-- Promotion on article
+create table promotions (
+    idArticle int not null primary key,
+    reduction int not null,
+    constraint foreign key(idArticle) references articles(id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
+
+-- Login / password
+-- xxDarkJeanLucxx1 / jaimelesfleurs
+-- Michemiche / jaimelalogique
+-- Imasodark / noIdea
+-- test / test
+INSERT INTO users (firstname, lastname, login, password, address) VALUES('Jean', 'Luc', 'xxDarkJeanLucxx', '$2a$10$Muyc6YB5ySQzoCkiDIg.dOlRoQ6zOLy4SSlHOeS/UPvjSDQ9SQHem', '10 rue du jardin 54500'),
+    ('Didier', 'Gal', 'Michemiche', '$2a$10$kFbz7.4xASQ4bADb2Jb.1uncdc4ZvIVcx/vN.pLvw77sYCgmcsrpG', '27 rue de l ennuie 26356'),
+    ('Kevin', 'Louche', 'Imasodark', '$2a$10$mdqbfL2T5aqBOn1K2aIqW.JBVNLyDKg9pLf1HW98GNFoKquUEchGi', '27 rue de l ennuie 54400'),
+    ('test', 'test', 'test', '$2a$10$eP1pj5PXWx3unorntbWSSuajIS29.k8l8j9ExKi1lQ/sP94r9arVu', 'test adress');
 
 INSERT INTO categories(name) VALUES ('Meuble'), ('Biblo'), ('Livre'), ('Bijoux'), ('Autre');
 
@@ -78,5 +92,14 @@ INSERT INTO participation (idUser, idArticle, price) VALUES (2, 1, 20.00), (3, 1
 INSERT INTO articles (name, description, seller, startPrice, startDate, endDate, weight) VALUES('Machine à écrire', 'Machine à écrire ayant appartenu à Asterion le Bon en personne', 1, 120.00, '2020-12-06 10:30:00', '2020-12-15 20:00:00', 10.5);
 INSERT INTO of_category (idArticle,idCategory) VALUES (2,3), (2,4), (2,5);
 
+-- Kevin sell 'Bois', a 'Autre'.
+INSERT INTO articles (name, description, seller, startPrice, startDate, endDate, weight) VALUES('Bois', 'Pour allumer le feu de sa cheminée', 3, 5.00, '2020-12-06 10:30:00', '2020-12-15 20:00:00', 10.5);
+INSERT INTO of_category (idArticle,idCategory) VALUES (3,5);
+
 -- Gal and test participate in the auction 'truc'
 INSERT INTO participation (idUser, idArticle, price) VALUES (2, 2, 200.00), (4, 2, 150.00);
+
+-- 'Imprimimante' with a reduction of 35% on the final price
+INSERT INTO promotions(idArticle, reduction) VALUES (1, 35);
+-- 'Bois' with a reduction of 10%
+INSERT INTO promotions(idArticle, reduction) VALUES (3, 10);

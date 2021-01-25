@@ -7,6 +7,10 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;
 
+/**
+ *
+ * @author DylanLICHO
+ */
 public interface IArticleRepository extends CrudRepository<Article, Integer> {
     Optional<Article[]> findBySeller(Integer seller);
 }

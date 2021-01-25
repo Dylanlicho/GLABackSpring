@@ -3,6 +3,10 @@ package fr.univlorraine.apde.model.ofCategoryEntity;
 import java.io.Serializable;
 import java.util.Objects;
 
+/**
+ *
+ * @author DylanLICHO
+ */
 public class PrimaryKeyOfCategory implements Serializable {
 
     // Id of the article

@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ *
+ * @author DylanLICHO
+ */
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class DeliveryController {

@@ -1,5 +1,9 @@
 package fr.univlorraine.apde.securityJWT.payloads;
 
+/**
+ *
+ * @author DylanLICHO
+ */
 public class LoginRequest {
 
     private String login;

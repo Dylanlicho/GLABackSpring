@@ -23,6 +23,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 
+/**
+ *
+ * @author DylanLICHO
+ */
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class LoginController {

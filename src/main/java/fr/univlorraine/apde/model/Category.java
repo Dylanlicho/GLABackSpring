@@ -5,7 +5,10 @@ import org.springframework.stereotype.Service;
 
 import javax.persistence.*;
 
-
+/**
+ *
+ * @author DylanLICHO
+ */
 @Service
 @Scope("prototype")
 @Entity

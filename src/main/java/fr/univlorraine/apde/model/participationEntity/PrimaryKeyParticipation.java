@@ -3,6 +3,10 @@ package fr.univlorraine.apde.model.participationEntity;
 import java.io.Serializable;
 import java.util.Objects;
 
+/**
+ *
+ * @author DylanLICHO
+ */
 public class PrimaryKeyParticipation implements Serializable {
 
     // Id of the user who participate to the aunction
