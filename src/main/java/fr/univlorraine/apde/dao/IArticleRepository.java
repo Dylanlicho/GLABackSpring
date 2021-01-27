@@ -17,5 +17,8 @@ public interface IArticleRepository extends CrudRepository<Article, Integer> {
     @Query(value = "select * from articles inner join of_category on of_category.idCategory = ?1 where articles.id = of_category.idArticle", nativeQuery = true)
     Optional<Article[]> findByCategoryId(Integer categoryId);
 
+    @Query(value = "SELECT * FROM participation inner join articles on participation.idUser = ?1 where participation.idArticle = articles.id", nativeQuery = true)
+    Optional<Article[]> findParticipationByIdUser(Integer idUser);
+
     Optional<Article[]> findByName(String name);
 }

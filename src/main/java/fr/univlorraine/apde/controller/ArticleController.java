@@ -38,6 +38,10 @@ public class ArticleController {
         return dao.findByName(name);
     }
 
+    @GetMapping(value = "participation/user/{idUser}")
+    Optional<Article[]> findParticipationByIdUser(@PathVariable Integer idUser){return dao.findParticipationByIdUser(idUser);}
+
+
     @GetMapping(value = "article/seller/{seller}")
     public Optional<Article[]> getArticleBySeller(@PathVariable Integer seller){
         return dao.findBySeller(seller);

@@ -10,7 +10,6 @@ import javax.persistence.*;
  *
  * @author DylanLICHO
  */
-@Service
 @Scope("prototype")
 @Entity
 @Table(name = "Promotions")

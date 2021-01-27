@@ -10,7 +10,6 @@ import java.util.Date;
  *
  * @author DylanLICHO
  */
-@Service
 @Scope("prototype")
 @Entity
 @Table(name = "Articles")

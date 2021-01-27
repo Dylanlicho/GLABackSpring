@@ -1,10 +1,12 @@
 package fr.univlorraine.apde.controller;
 
 import fr.univlorraine.apde.dao.IParticipationRepository;
+import fr.univlorraine.apde.model.Article;
 import fr.univlorraine.apde.model.participationEntity.Participation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -27,6 +29,7 @@ public class ParticipationController {
     public Optional<Participation> getParticipationById(@PathVariable Integer id){
         return dao.findById(id);
     }
+
 
     @GetMapping(value = "participation/best/{idArticle}")
     public Optional<Participation> getBestParticipationByIdArticle(@PathVariable Integer idArticle){
