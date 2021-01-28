@@ -17,6 +17,10 @@ First, clone this repo using a terminal :
 $ git clone https://github.com/Dylanlicho/apde-back-spring.git
 ```
 
+Create a database mysql and launch the script gla.sql
+
+Adapt the application.properties to add the id and the password of the database
+
 Then launch the APDEApplication class using IntelliJ IDEA under *apde-back-spring/src/main/java/fr/univlorraine/apde/*.
 
 The back-end application will be served under the 8080 port.
@@ -45,6 +49,9 @@ $ rm -rf apde-back-spring
 
 * /articles : returns all the articles
 * /article/id : returns the specific article where id is the id of the article
+* /article/category/{categoryId} : returns the article with the specify categoryId
+* /article/name/{name} : return the article with the name of the article
+* /participation/user/{idUser} : return the list of article where the user referenced by the idUser is participing
 * /article/seller/seller : returns the specific article where seller is the id of the seller of the article
 * /existArticle/id : returns whether the specific article exists or not
 * /countArticles : returns the count of all the articles
@@ -86,6 +93,22 @@ Participation is the relation between a user and a bid.
 * /addParticipation : adds a new participation
 * /deleteParticipationByParticipation : deletes a participation given this specific participation
 * /deleteParticipationById : deletes a participation given his specific id
+
+### Promotion
+
+* /promotions : returns all the promotions
+* /promotion/{id} : returns the specific promotion identified by the id
+* /existPromotion/{id} : returns whether the specific promotion exist or not
+* /countPromotions : returns the number of promotions
+* /addPromotion : add a new promotion
+* /deletePromotionByPromotion : deletes a promotion given a promotion
+* /deletePromotionById/{id} : deletes a promotion given an id
+
+
+### Login
+
+* /auth/login : log in an user
+* /auth/register : register an user 
 
 ## Related repositories
 
